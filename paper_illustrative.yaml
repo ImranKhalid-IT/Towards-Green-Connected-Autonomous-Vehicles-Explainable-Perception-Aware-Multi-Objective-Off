@@ -1,0 +1,41 @@
+# Manuscript settings + illustrative, unverified implementation defaults.
+# Change values through YAML or an explicit override; all values logged in manifest.
+seed: 2026
+n_tasks: 300
+n_vehicles: 5
+sensing_hz: 10.0
+deadline_ms: 100.0
+feature_bytes: 25000
+weather_probs: [0.87, 0.08, 0.03, 0.02]
+link_rates_mbps: [5.0, 15.0, 30.0]
+link_overheads_ms: [5.2, 5.2, 2.3]
+link_success: [0.979, 0.995, 0.999]
+link_stationary: [0.05, 0.35, 0.60]
+pre_ms: 3.9
+decision_ms: 0.5
+return_ms: 0.7
+xai_call_ms: 15.8
+xai_budget: 0.25
+energy_ref_j: 2.9
+# The following are new engineering choices, NOT specified by the supplied paper.
+edge_workers: 2
+edge_max_buffer: 12
+local_max_buffer: 4
+background_edge_rate_hz: 30.0
+service_jitter_sigma: 0.07
+local_static_w: 7.0
+preprocess_energy_j: 0.08
+xai_loc_energy_j: 0.16
+xai_edge_energy_j: 0.12
+fusion_weight: 0.45
+accuracy_weight: 2.4
+deadline_penalty: 2.5
+drop_penalty: 4.0
+link_persistence: 0.84
+alpha: 0.5
+enable_xai: true
+feedback_enabled: true
+fixed_detector: null
+scenario: mixed
+exact_weather_shares: true
+adapter: synthetic

@@ -1,0 +1,14 @@
+[
+  {
+    "update": 1,
+    "loss": 338.4799011230469,
+    "mean_reward": -1.6218583292186408,
+    "episodes_finished": 1
+  },
+  {
+    "update": 2,
+    "loss": 304.10118560791017,
+    "mean_reward": -1.624212079387528,
+    "episodes_finished": 3
+  }
+]

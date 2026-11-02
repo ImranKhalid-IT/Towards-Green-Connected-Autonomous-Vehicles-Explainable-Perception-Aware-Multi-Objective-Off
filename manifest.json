@@ -1,0 +1,94 @@
+{
+  "seed": 2026,
+  "n_tasks": 75,
+  "n_vehicles": 5,
+  "sensing_hz": 10.0,
+  "deadline_ms": 100.0,
+  "feature_bytes": 25000,
+  "weather_probs": [
+    0.87,
+    0.08,
+    0.03,
+    0.02
+  ],
+  "link_rates_mbps": [
+    5.0,
+    15.0,
+    30.0
+  ],
+  "link_overheads_ms": [
+    5.2,
+    5.2,
+    2.3
+  ],
+  "link_success": [
+    0.979,
+    0.995,
+    0.999
+  ],
+  "link_stationary": [
+    0.05,
+    0.35,
+    0.6
+  ],
+  "pre_ms": 3.9,
+  "decision_ms": 0.5,
+  "return_ms": 0.7,
+  "xai_call_ms": 15.8,
+  "xai_budget": 0.25,
+  "energy_ref_j": 2.9,
+  "edge_workers": 2,
+  "edge_max_buffer": 12,
+  "local_max_buffer": 4,
+  "background_edge_rate_hz": 30.0,
+  "service_jitter_sigma": 0.07,
+  "local_static_w": 7.0,
+  "preprocess_energy_j": 0.08,
+  "xai_loc_energy_j": 0.16,
+  "xai_edge_energy_j": 0.12,
+  "fusion_weight": 0.45,
+  "accuracy_weight": 2.4,
+  "deadline_penalty": 2.5,
+  "drop_penalty": 4.0,
+  "link_persistence": 0.84,
+  "alpha": 0.5,
+  "enable_xai": true,
+  "feedback_enabled": true,
+  "fixed_detector": null,
+  "exact_weather_shares": true,
+  "stochastic_training_weather": true,
+  "scenario": "mixed",
+  "adapter": "synthetic",
+  "carla_host": "127.0.0.1",
+  "carla_port": 2000,
+  "traci_port": 8813,
+  "ppo_hidden": 128,
+  "ppo_lr": 0.0003,
+  "ppo_steps": 512,
+  "ppo_epochs": 5,
+  "ppo_minibatch": 128,
+  "ppo_gamma": 0.99,
+  "ppo_gae": 0.95,
+  "ppo_clip": 0.2,
+  "ppo_entropy_coef": 0.01,
+  "ppo_value_coef": 0.5,
+  "ppo_grad_clip": 0.5,
+  "mode": "modeled synthetic demonstration; NOT independent paper reproduction",
+  "study": "weather",
+  "policy": "proposed_heuristic",
+  "variant_changes": {
+    "clear": {
+      "scenario": "clear"
+    },
+    "light_rain": {
+      "scenario": "light_rain"
+    },
+    "heavy_rain": {
+      "scenario": "heavy_rain"
+    },
+    "dense_smog": {
+      "scenario": "dense_smog"
+    }
+  },
+  "warning": "synthetic assumptions and surrogate perception; NOT actual CARLA-SUMO or real mAP"
+}
