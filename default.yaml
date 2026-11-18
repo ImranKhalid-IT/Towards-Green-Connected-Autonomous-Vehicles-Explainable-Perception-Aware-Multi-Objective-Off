@@ -1,0 +1,106 @@
+# GreenCAV default configuration. Values marked "model choice" in greencav/config.py
+# are simulator assumptions not reported in the paper.
+n_runs: 30
+tasks_per_run: 30000
+f_s: 10.0
+deadline: 0.1
+weather_shares:
+- 0.87
+- 0.08
+- 0.03
+- 0.02
+exact_weather_counts: true
+weather_mean_segment: 50
+weather_classifier_acc: 0.8
+carrier_ghz: 5.9
+bandwidth_hz: 10000000.0
+p_tx_dbm: 20.0
+noise_figure_db: 9.0
+uplink_rates_mbps:
+- 5.0
+- 15.0
+- 30.0
+uplink_shares:
+- 0.05
+- 0.35
+- 0.6
+link_overhead_s:
+- 0.0052
+- 0.0052
+- 0.0023
+link_success:
+- 0.979
+- 0.995
+- 0.999
+radio_energy_j:
+- 0.093
+- 0.045
+- 0.028
+link_mixing: 0.2
+d_feat_bytes: 25000
+eta_pa: 0.3
+f_loc_ghz: 1.8
+edge_workers: 4
+edge_buffer: 32
+local_buffer: 2
+t_pre: 0.0039
+t_dec: 0.0005
+t_ret: 0.0007
+e_pre: 0.1
+p_static: 3.0
+compute_jitter: 0.1
+throttle_gain: 1.5
+throttle_onset: 0.4
+throttle_ema: 0.02
+traffic_regime: moderate
+traffic_loads:
+  sparse: 0.25
+  moderate: 0.58
+  dense: 0.92
+  ultra_dense: 0.98
+background_service_s: 0.0141
+background_service_cv: 0.3
+burst_fraction: 0.15
+burst_load: 1.25
+burst_mean_s: 2.0
+xai_budget: 0.25
+xai_fusion_weight: 0.5
+xai_call_s: 0.0158
+e_xai_local: 0.3
+e_xai_edge: 0.06
+xai_enabled: true
+uncertainty_base:
+- 0.12
+- 0.28
+- 0.45
+- 0.62
+uncertainty_concentration: 12.0
+alpha: 0.5
+psi: 2.0
+lambda_d: 1.0
+lambda_p: 1.5
+traction_wh_per_km: 150.0
+speed_kmh: 60.0
+range_km: 400.0
+grid_g_per_wh: 0.4
+gamma: 0.99
+gae_lambda: 0.95
+clip_eps: 0.2
+lr: 0.0003
+hidden:
+- 256
+- 256
+train_steps: 2000000
+minibatch: 256
+epochs: 10
+rollout: 2048
+c_value: 0.5
+c_entropy: 0.01
+alpha_train:
+- 0.1
+- 0.9
+train_tasks_per_episode: 3000
+fixed_detector: null
+use_weather_input: true
+use_xai_input: true
+forced_link_state: null
